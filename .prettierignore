@@ -1,0 +1,11 @@
+dist
+build
+node_modules
+package-lock.json
+.npmrc
+.prettierrc
+.prettierignore
+.gitattributes
+**/*.snap
+**/package.json
+coverage/**
