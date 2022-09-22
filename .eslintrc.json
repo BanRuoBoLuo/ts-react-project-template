@@ -1,56 +1,47 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "project": ["tsconfig.json"],
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
     ],
-    "overrides": [
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
     ],
-    "parserOptions": {
-        "project": [
-            "tsconfig.json"
-        ],
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "react-hooks",
-        "prettier"
-    ],
-    "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": [
-          1,
-          {
-            "extensions": [
-              ".tsx"
-            ]
-          }
-        ],
-        "import/prefer-default-export": "off",
-        "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "ts": "never",
-            "tsx": "never"
-          }
-        ],
-        "prettier/prettier": "error",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "react/jsx-one-expression-per-line": "off",
-        "no-use-before-define":"off"
-    },
-    "settings": {
-        "import/resolver": {
-            "typescript": {}
-        }
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-use-before-define": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
+  }
 }
